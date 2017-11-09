@@ -2,37 +2,47 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <link href="https://fonts.googleapis.com/css?family=Patua+One|Andada" rel="stylesheet">
 
+<!--<meta name="viewport" content="width=device-width">-->
+
 <style>
   body {
     background-color: #C9E5F7;
   }
-  
+
   .p-font {
     font-family: 'Patua One', cursive;
   }
-  
+
   .a-font {
     font-family: 'Andada', serif;
   }
-  
-  #header1 {
+
+  header {
+    background-color: #95A9CB;
+    border-bottom: 1vh solid black;
+  }
+
+  #title1 {
     color: #1748CE;
     font-size: 6vw;
+    text-align: left;
+    margin: 2vh 0vw 3vh 5vw;
   }
-  
-  .logo-header {
-    margin-top: 8px;
+
+  #logo1 {
+    width: 75%;
+    margin: 2vh 10vw 4vh 0vw;
   }
-  
+
   #menu1 {
     color: #B5C8FB;
     background-color: #1748CE;
     font-size: 3vw;
     outline: 3px double black;
-    margin: 3vh 18vw 6vh 18vw;
-    padding: 2vh 0vh 2vh 0vh;
+    margin: 0vh 10vw 6vh 5vw;
+    padding: 2vh 1vw 2vh 1vw;
   }
-  
+
   #about1 {
     color: black;
     font-size: 2.6vw;
@@ -42,78 +52,77 @@
     color: #4666BF;
     font-size: 2.2vw;
   }
-  
+
   #intro2 {
     color: #4666BF;
     font-size: 2.2vw;
   }
-  
+
   #contact1 {
     color: black;
     font-size: 2.6vw;
   }
-  
+
   #contact2 {
     color: #4666BF;
     font-size: 2.2vw;
   }
-  
-  a:link, a:visited {
+
+  a:link,
+  a:visited {
     color: inherit;
   }
-  
+
   #about-section span {
     color: #07339A;
     font-weight: bolder;
   }
-  
 </style>
 
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-xs-2">
-      <img id="logo1" class="img-responsive logo-header" src="https://i.imgur.com/3jiTHzX.png">
-    </div>
-    <div class="col-xs-8">
-      <h1 id="header1" class="text-center p-font"> Tommy Greenwald </h1>
-    </div>
-    <div class="col-xs-2">
-      <img id="logo2" class="img-responsive logo-header" src="https://i.imgur.com/3jiTHzX.png">
+<header>
+  <div id="container1" class="container-fluid">
+    <div class="row">
+      <div class="col-xs-9">
+        <h1 id="title1" class="text-center p-font"> Tommy Greenwald </h1>
+        <h2 id="menu1" class="text-center p-font">
+          <a href="https://github.com/tommygreenwald" target="_blank">Github</a> &emsp; / &emsp;
+          <a href="resume%20public.pdf" target="_blank">Resume</a> &emsp; / &emsp;
+          <a href="blog.html">Blog</a>
+        </h2>
+      </div>
+      <div class="col-xs-3">
+        <img id="logo1" src="https://i.imgur.com/3jiTHzX.png">
+      </div>
     </div>
   </div>
-  <h2 id="menu1" class="text-center p-font"> 
-  <a href="https://github.com/tommygreenwald" target="_blank">Github</a>
-  &emsp; / &emsp;
-  <a href="resume%20public.pdf" target="_blank">Resume</a>
-  &emsp; / &emsp;
-  <a href="blog.html" target="_blank">Blog</a>
-  </h2>
+</header>
+
+<div class="container-fluid">
   <section id="about-section">
     <h3 id="about1" class="p-font">About me</h3>
-  <p id="intro1" class="a-font"> Hello! My name is 
-                  <span>Tommy Greenwald</span>, current freshmen at 
-                  <span>Northeastern CCIS.</span> I am pursuing a 
-                  <span>Computer Science B.S.</span> with a minor in 
-                  <span>Mathematics.</span>
-  </p>
-  <p id="intro2" class="a-font"> I am interested in 
-                  <span>cybersecurity</span>, 
-                  <span>cryptocurrency/blockchain technology</span>, and 
-                  <span>software engineering.</span> I have worked with 
-                  <span>HTML/CSS</span>, 
-                  <span>Java</span>, 
-                  <span>Racket (Scheme derivative)</span>, and some 
-                  <span>Javascript.</span>
-  </p>
+    <p id="intro1" class="a-font"> Hello! My name is
+      <span>Tommy Greenwald</span>, current freshmen at
+      <span>Northeastern CCIS.</span> I am pursuing a
+      <span>Computer Science B.S.</span> with a minor in
+      <span>Mathematics.</span>
+    </p>
+    <p id="intro2" class="a-font"> I am interested in
+      <span>cybersecurity</span>,
+      <span>blockchain technology</span>, and
+      <span>software engineering.</span> I have worked with
+      <span>HTML/CSS</span>,
+      <span>Java</span>,
+      <span>Racket (Scheme derivative)</span>, and some
+      <span>Javascript.</span>
+    </p>
   </section>
   <section id="contact-section">
     <h3 id="contact1" class="p-font">Contact</h3>
-      <ul id="contact2" class="a-font">
-        <li>Email: me@tgreenwald.com</li>
-        <li>Phone: 610-772-1231</li>
-        <li>Other: 
+    <ul id="contact2" class="a-font">
+      <li>Email: me@tgreenwald.com</li>
+      <li>Other:
         <a href="https://www.linkedin.com/in/t-greenwald/" target="_blank">LinkedIn</a>
-        </li>
-      </ul>
+      </li>
+    </ul>
   </section>
 </div>
