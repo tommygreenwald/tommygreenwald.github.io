@@ -12,42 +12,60 @@
     overflow-x: hidden
   }
 
-  body {
-    background-color: #C9E5F7;
+  @media screen and (orientation: landscape) {
+    #body-container {
+      width: 70%;
+      margin-top: 5vh;
+    }
   }
 
-  .p-font {
-    font-family: 'Patua One', cursive;
+  @media screen and (orientation: portrait) {
+    #body-container {
+      width: 90%;
+      margin-top: 5vh;
+    }
   }
 
-  .a-font {
-    font-family: 'Andada', serif;
+  .align {
+    display: flex;
+    align-items: center;
   }
 
-  header {
-    background-color: #95A9CB;
-    border-bottom: 1vh solid black;
+  .header-font {
+    font-family: "Helvetica Neue", serif;
   }
 
   #title1 {
-    color: #1748CE;
-    font-size: 6vw;
-    text-align: left;
-    margin: 2vh 0vw 3vh 6vw;
-  }
-
-  #logo1 {
-    width: 75%;
-    margin: 2vh 10vw 4vh 0vw;
+    color: black;
+    font-size: 3vw;
+    font-weight: bolder;
   }
 
   #menu1 {
-    color: #B5C8FB;
-    background-color: #1748CE;
-    font-size: 3vw;
-    outline: 3px double black;
-    margin: 0vh 10vw 6vh 6vw;
-    padding: 2vh 1vw 2vh 1vw;
+    border-top: 0.2vh solid black;
+    border-bottom: 0.2vh solid black;
+    padding: 1.8vh 0 1.8vh 0;
+    font-size: 2.2vw;
+    font-weight: bold;
+    word-spacing: 2.2vw;
+    color: #337ab7;
+  }
+
+  #menu1 span {
+    color: black;
+  }
+  
+  #name1 {
+    color: black;
+    font-size: 2.2vw;
+    font-weight: bold;
+  }
+  
+  #posts {
+    color: #07339A;
+    font-size: 1.8vw;
+    font-weight: 500;
+    line-height: 5vh;
   }
 
   a:link,
@@ -61,44 +79,39 @@
     text-decoration: none;
   }
 
-  #title-section h3 {
-    color: #1748CE;
-    font-weight: bolder;
-    font-size: 3.2vw;
+  #title-section {
+    margin: 0vh 4.5vw 0vh 4.5vw;
   }
 </style>
-<header>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-xs-9">
-        <h1 id="title1" class="text-center p-font">
-          Tech Blog
-        </h1>
-        <h2 id="menu1" class="text-center p-font">
-          <a href="https://github.com/tommygreenwald" target="_blank">Github</a> &emsp; / &emsp;
-          <a href="public%20resume.pdf" target="_blank">Resume</a> &emsp; / &emsp;
-          <a href="index.html">Home</a>
-        </h2>
-      </div>
-      <div class="col-xs-3">
-        <img id="logo1" src="https://i.imgur.com/3jiTHzX.png">
+
+<div id="body-container" class="container-fluid">
+  <header>
+    <div class="container-fluid header-font">
+      <div class="row align">
+        <div class="col-xs-10 text-center">
+          <h1 id="title1">
+            Tech Blog
+          </h1>
+          <h2 id="menu1">
+            <a href="https://github.com/tommygreenwald" target="_blank">Github</a> <span>/</span>
+            <a href="public%20resume.pdf" target="_blank">Resume</a> <span>/</span>
+            <a href="index.html">Home</a>
+          </h2>
+        </div>
+        <div class="col-xs-2">
+          <img id="logo1" class="img-responsive" src="https://i.imgur.com/3jiTHzX.png">
+        </div>
       </div>
     </div>
-</header>
+  </header>
 
-<div class="container-fluid">
-  <section id="title-section">
-    <h3 class="text-center a-font">
-      <a href="">Free software, GPL, and Apache</a>
-    </h3>
-    <h3 class="text-center a-font">
-      <a href="">Article 2</a>
-    </h3>
-    <h3 class="text-center a-font">
-      <a href="">Article 3</a>
-    </h3>
-    <h3 class="text-center a-font">
-      <a href="">Article 4</a>
-    </h3>
-  </section>
+  <div class="container-fluid">
+    <section id="title-section">
+      <h1 id= "name1">Posts</h1>
+      <h6 id="posts">
+        <a href="" target="_blank">Simple Bitcoin: Hashing and Encryption</a><br>
+        <a href="" target="_blank">Free Software, GPL, and Apache</a><br>
+      </h6>
+    </section>
+  </div>
 </div>
