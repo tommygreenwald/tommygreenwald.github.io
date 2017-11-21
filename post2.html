@@ -1,0 +1,139 @@
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Patua+One|Andada" rel="stylesheet">
+
+<style>
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden
+  }
+
+  @media screen and (orientation: landscape) {
+    #body-container {
+      width: 70%;
+      margin-top: 5vh;
+    }
+  }
+
+  @media screen and (orientation: portrait) {
+    #body-container {
+      width: 90%;
+      margin-top: 5vh;
+    }
+  }
+
+  .align {
+    display: flex;
+    align-items: center;
+  }
+
+  .header-font {
+    font-family: "Helvetica Neue", serif;
+  }
+
+  #title1 {
+    color: black;
+    font-size: 3vw;
+    font-weight: bolder;
+  }
+
+  #menu1 {
+    border-top: 0.2vh solid black;
+    border-bottom: 0.2vh solid black;
+    padding: 1.8vh 0 1.8vh 0;
+    font-size: 2.2vw;
+    font-weight: bold;
+    word-spacing: 2.2vw;
+    color: #337ab7;
+  }
+
+  #menu1 span {
+    color: black;
+  }
+
+  #content-section {
+    margin: 0vh 4.5vw 0vh 4.5vw;
+    color: #07339A;
+    font-size: 1.6vw;
+    font-weight: 500;
+    line-height: 5vh;
+    text-indent: 4vw;
+  }
+
+  #content-section span {
+    color: #031f60;
+    font-weight: 900;
+  }
+
+  a:link,
+  a:visited {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #498EE8;
+    text-decoration: none;
+  }
+</style>
+
+<div id="body-container" class="container-fluid">
+  <header>
+    <div class="container-fluid header-font">
+      <div class="row align">
+        <div class="col-xs-10 text-center">
+          <h1 id="title1">
+            Free Software, GPL, and Apache
+          </h1>
+          <h2 id="menu1">
+            <a href="index.html">Home</a> <span>/</span>
+            <a href="blog.html">Blog</a>
+          </h2>
+        </div>
+        <div class="col-xs-2">
+          <img id="bitcoin1" class="img-responsive" src="https://pbs.twimg.com/media/CxOaW3gXAAEdHKW.jpg">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container-fluid">
+    <article id="content-section" class="text-justify">
+      <p id="para1">
+        Recently, Richard Stallman gave a talk at my school (Northeastern University) that was sponsored by our hacking club, NUHacks. It was his usual talk, covering the merits of free software (free as in freedom) and the corruption of proprietary software,
+        concluding with his alter ego, Lord I<span>GNU</span>tious.
+      </p>
+      <p id="para2">
+        Stallman advocates for free software, where the code is completely open sourced and any derivatives of it must also be completely open sourced. This is stated explicitly in the GNU General Public License (GPL). I agree with many of the principles of the
+        GPL. Code is best open sourced, as it allows others to keep it secure, make it technically more superior, and customizability. Therefore, everyone should open source their code, right?
+      </p>
+      <p id="para3">
+        Yes, they probably should, but that doesn't mean we should force them to. If open sourcing is truly the best way for developing good software, then let people make proprietary derivatives of your software. It will be none superior, and they may eventually
+        run into problems and be more vulnerable to security flaws. As Torvalds (Linux creator) famously said, "Given enough eyeballs, all bugs are shallow." It is easiest to find all bugs when there is the greatest amount of people looking for them.
+        This is where X11 (MIT) and Apache type licenses succeed where I find the GPL too restrictive and controlling. Let people discover they should open source their code on their own.
+      </p>
+      <p id="para4">
+        But then what if companies take your code and successfully profit off it, like Apple did with BSD (Berkeley Software Distribution) back in 2001 for Mac OS X? They are the ones at the disadvantage, not the creators of the software. The creator still has
+        plenty of ways to profit off their open sourced, technically superior software. They can provide paid help to set up and run their software for customers, since it may be too complicated to use easily on their own. If the software isn't as complex,
+        they can release the base of it open sourced, and provide proprietary plugins and upgrades to it. If companies want a specific modification of the code, they can pay the creators to make it and keep it open sourced (like Red Hat does). Apple,
+        who took the open source code and made proprietary derivatives, will be without a community of developers to help them improve and upgrade the code.
+      </p>
+      <p id="para5">
+        However, there is a time and place for the GPL. In instances where you are not trying to profit off your own code at all, I would use the GPL. For instance, I have this website licensed under the GPL. I have no intention of making a profit off this website,
+        and anyone who wants to use the templates of my website should be able to. If anyone takes it and improves it, they should share it with everyone else. I can use any advice I can get on improving my WebDev. This is different from creating a product
+        that you intend to profit off, even if it is open source.
+      </p>
+      <p id="para6">
+        I agree with the idea of free software, I just don't agree with the GPL in forcing people to open source their derivatives. Let people learn about the benefits of open sourcing on their own, under an Apache type license. The world will soon come to realize
+        the benefits of open sourcing, and maybe one day licenses will not be needed.
+      </p>
+      <p id="para7">
+        Side note: GNU doesn't receive enough credit for their work on the Linux OS. The Linux kernel is a toy without GNU and the GNU Compiler Collection (GCC) in specific. It's a shame people only refer to the OS as Linux and not some variation of GNU/Linux.
+      </p>
+    </article>
+  </div>
+</div>
