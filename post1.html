@@ -1,0 +1,150 @@
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Patua+One|Andada" rel="stylesheet">
+
+<style>
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden
+  }
+
+  @media screen and (orientation: landscape) {
+    #body-container {
+      width: 70%;
+      margin-top: 5vh;
+    }
+  }
+
+  @media screen and (orientation: portrait) {
+    #body-container {
+      width: 90%;
+      margin-top: 5vh;
+    }
+  }
+
+  .align {
+    display: flex;
+    align-items: center;
+  }
+
+  .header-font {
+    font-family: "Helvetica Neue", serif;
+  }
+
+  #title1 {
+    color: black;
+    font-size: 3vw;
+    font-weight: bolder;
+  }
+
+  #menu1 {
+    border-top: 0.2vh solid black;
+    border-bottom: 0.2vh solid black;
+    padding: 1.8vh 0 1.8vh 0;
+    font-size: 2.2vw;
+    font-weight: bold;
+    word-spacing: 2.2vw;
+    color: #337ab7;
+  }
+
+  #menu1 span {
+    color: black;
+  }
+  
+  #content-section {
+    margin: 0vh 4.5vw 0vh 4.5vw;
+    color: #07339A;
+    font-size: 1.6vw;
+    font-weight: 500;
+    line-height: 5vh;
+    text-indent: 4vw;
+  }
+  
+  #content-section span {
+    color: #031f60;
+    font-weight: 900;
+  }
+
+  a:link,
+  a:visited {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #498EE8;
+    text-decoration: none;
+  }
+</style>
+
+<div id="body-container" class="container-fluid">
+  <header>
+    <div class="container-fluid header-font">
+      <div class="row align">
+        <div class="col-xs-10 text-center">
+          <h1 id="title1">
+            Simple Bitcoin: Hashing and Encryption
+          </h1>
+          <h2 id="menu1">
+            <a href="index.html">Home</a> <span>/</span>
+            <a href="blog.html">Blog</a>
+          </h2>
+        </div>
+        <div class="col-xs-2">
+          <img id="bitcoin1" class="img-responsive" src="http://evooeurobistro.com/wp-content/uploads/2016/08/Bitcoin-Logo-4096-PNG-Forocoches-RME.png">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container-fluid">
+    <article id="content-section" class="text-justify">
+      <p id="para1">
+        Bitcoin. Cryptocurrency. Two of the biggest buzzwords in the fields of finance and technology. Everyone has heard that bitcoin is a virtually untraceable online currency, gaining value every day and peaking recently at over $8,000. Some say it's a bubble,
+        and will soon crash. Are they right?
+      </p>
+      <p id="para2">
+        Who knows. Regardless, cryptocurrency is around and here to stay. However, it is a very complex technology, and many only have a surface understanding of how it works. They know it relies on the "blockchain", but what is that? Below, I'm going to explain
+        the first step in verifying a bitcoin transaction, so that it is ready to be put into the "blockchain".
+      </p>
+      <p id="para3">
+        Let's say you want to send $5 to your friend Bill. You and Bill both have a unique, public ID that allows you to be distinguished from anyone else. This is referred to as your <span>public key</span>, and it is a 256-bit number. Let's say that
+        your ID is 123abc, and Bill's is 456def (these are simplified ID's for the sake of clarity). We need a way to say that you sent $5 to Bill, so let's put it into a message. "I sent $5 to Bill". Now, let's replace I and Bill with your unique ID's.
+        "123abc sent $5 to 456def". This is a record of your transaction with Bill, and will eventually be put into the "blockchain".
+      </p>
+      <p id="para4">
+        In order for this transaction record to be put into a language that the computer can understand, it is <span>hashed.</span> A hash is simply a numerical representation of your transaction. In bitcoin, it is done using the <span>SHA 256</span>hashing
+        algorithm, meaning it is 256 bits long. Since bitcoin hashes are in <span>hexadecimal</span> number systems, that means the hash is 64 digits long. So, let's hash your transaction to Bill, it is now just "1a5b8c" (simplified again for clarity).
+        This small series of numbers/letters still represents the same amount of information as the original "I sent $5 to Bill.". However, now it can be uniquely identified as you and Bill, and the specifics of the transaction cannot be read. It should
+        be mentioned, a hash is irreversible. This means we cannot take "1a5b8c" and get back to "I sent $5 to Bill".
+      </p>
+      <p id="para5">
+        Now, we need to make it so that transaction record only could have come from you. Anyone has access to your public key, hence "public". To do this, we need your <span>private key.</span> Everyone has a private key in addition to their public key,
+        and they are uniquely tied together. However, you cannot abstract your private key from your public key (and vice versa) which is what makes the system secure. Only you have access your private key, and it must be stored in a secure place. Now,
+        we take your transaction record hash, "1a5b8c", and <span>encrypt</span> it with your private key. Encrypt means that we take your 256-bit hash, and turn it into a new 256-bit hash using your private key. It is now "2b6c9d". The process behind
+        this is very mathematical, but the important part to remember is that only you can do this, since only you have access to your private key. As a result, you now have a unique 256-bit hash of your transaction to Bill that only you could have produced.
+      </p>
+      <p id="para6">
+        This new hash is called a <span>signature.</span> Essentially, you have signed your transaction to Bill, and just like in real life, your signature is unique to you. This signature will be used later to verify that it was indeed you who intended
+        to send Bill $5 dollars.
+      </p>
+      <p id="para7">
+        Now, Bill receives your new hash of "2b6c9d". He now needs to verify that it was you who sent this money to him. Otherwise, he would be using stolen money. To do this, he uses your public key. Remember, your public key is related to your private key in
+        a unique way. Now, Bill encrypts your transaction hash with your public key. Remember, encrypting this hash is going to create a new 256-bit hash. Guess what this hash is going to be if it was indeed you who sent the transaction? "1a5b8c." That's
+        right, the same exact hash as before. This is because "2b6c9d" was encrypted using your private key, and Bill encrypted it again ("decrypted") it using your public key. Since your public and private key are uniquely related, if Bill's encrypted
+        hash matches your original hash of your transaction, it was indeed you who sent the transaction. If it wasn't you, the two would not match.
+      </p>
+      <p id="para8">
+        This is the most complicated part, and if you are confused, that is natural. The math behind encryption is very high-level and difficult to understand. The important part to remember, which I have repeated several times on purpose, is that <span>your public and private key are uniquely related.</span>This
+        is fundamental to the <span>RSA</span> encryption scheme, which is what bitcoin utilizes to encrypt the hashes and generate public/private keys.
+      </p>
+      <p id="para9">
+        Now, we have a verified transaction of $5 from you to Bill. Next, we need to add this transaction to the "blockchain", to prove that no one is faking any transactions…
+      </p>
+    </article>
+  </div>
+</div>
