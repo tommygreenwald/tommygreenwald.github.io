@@ -13,18 +13,129 @@
     overflow-x: hidden
   }
 
-  @media screen and (orientation: landscape) {
+  /*mobile phones*/
+
+  @media screen and (max-width: 767px) {
+    #body-container {
+      width: 94%;
+      margin-top: 2vh;
+    }
+
+    body {
+      background-color: #FBFBFB;
+      font-size: 23px;
+    }
+    #title1 {
+      color: black;
+      font-size: 1.8em;
+      font-weight: bolder;
+    }
+    #menu1 {
+      border-top: medium solid black;
+      border-bottom: medium solid black;
+      padding: 1.8vh 0 1.8vh 0;
+      font-size: 1.5em;
+      font-weight: bold;
+      word-spacing: 1.5vw;
+      color: #337ab7;
+    }
+    .section-title {
+      color: black;
+      font-size: 1.3em;
+      font-weight: bold
+    }
+    .intro-para {
+      color: #4666BF;
+      font-size: 1.1em;
+    }
+
+    #contact-info {
+      color: #4666BF;
+      font-size: 1.1em;
+    }
+  }
+
+  /*tablets*/
+
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    #body-container {
+      width: 92%;
+      margin-top: 3vh;
+    }
+    body {
+      background-color: #FBFBFB;
+      font-size: 22.5px;
+    }
+    #title1 {
+      color: black;
+      font-size: 1.7em;
+      font-weight: bolder;
+    }
+    #menu1 {
+      border-top: medium solid black;
+      border-bottom: medium solid black;
+      padding: 1.8vh 0 1.8vh 0;
+      font-size: 1.4em;
+      font-weight: bold;
+      word-spacing: 1.4em;
+      color: #337ab7;
+    }
+    .section-title {
+      color: black;
+      font-size: 1.2em;
+      font-weight: bold
+    }
+    .intro-para {
+      color: #4666BF;
+      font-size: 1em;
+    }
+
+    #contact-info {
+      color: #4666BF;
+      font-size: 1em;
+    }
+  }
+
+  /*desktops*/
+
+  @media screen and (min-width: 992px) {
     #body-container {
       width: 70%;
       margin-top: 5vh;
     }
-  }
-
-  @media screen and (orientation: portrait) {
-    #body-container {
-      width: 90%;
-      margin-top: 5vh;
+    body {
+      background-color: #FBFBFB;
+      font-size: 22px;
     }
+    #title1 {
+      color: black;
+      font-size: 1.6em;
+      font-weight: bolder;
+    }
+    #menu1 {
+      border-top: medium solid black;
+      border-bottom: medium solid black;
+      padding: 1.8vh 0 1.8vh 0;
+      font-size: 1.3em;
+      font-weight: bold;
+      word-spacing: 1.3em;
+      color: #337ab7;
+    }
+    .section-title {
+      color: black;
+      font-size: 1.1em;
+      font-weight: bold
+    }
+    .intro-para {
+      color: #4666BF;
+      font-size: 0.9em;
+    }
+
+    #contact-info {
+      color: #4666BF;
+      font-size: 0.9em;
+    }
+
   }
 
   .align {
@@ -36,46 +147,8 @@
     font-family: "Helvetica Neue", serif;
   }
 
-  #title1 {
-    color: black;
-    font-size: 3vw;
-    font-weight: bolder;
-  }
-
-  #menu1 {
-    border-top: 0.2vh solid black;
-    border-bottom: 0.2vh solid black;
-    padding: 1.8vh 0 1.8vh 0;
-    font-size: 2.2vw;
-    font-weight: bold;
-    word-spacing: 2.2vw;
-    color: #337ab7;
-  }
-
   #menu1 span {
     color: black;
-  }
-
-  #about1 {
-    color: black;
-    font-size: 2vw;
-    font-weight: bold;
-  }
-
-  #intros {
-    color: #4666BF;
-    font-size: 1.5vw;
-  }
-
-  #contact1 {
-    color: black;
-    font-size: 2vw;
-    font-weight: bold;
-  }
-
-  #contact2 {
-    color: #4666BF;
-    font-size: 1.8vw;
   }
 
   a:link,
@@ -126,15 +199,15 @@
 
   <div class="container-fluid">
     <section id="about-section">
-      <h3 id="about1">About me</h3>
+      <h3 class="section-title">About me</h3>
       <div id="intros">
-        <p id="intro1"> Hello! My name is
+        <p class="intro-para"> Hello! My name is
           <span>Tommy Greenwald</span>, current freshmen at
           <span>Northeastern CCIS.</span> I am pursuing a
           <span>Computer Science B.S.</span> with a minor in
           <span>Mathematics.</span>
         </p>
-        <p id="intro2"> I am interested in
+        <p class="intro-para"> I am interested in
           <span>cybersecurity</span>,
           <span>blockchain technology</span>, and
           <span>software engineering.</span> I have worked with
@@ -143,14 +216,15 @@
           <span>Racket (Scheme derivative)</span>, and some
           <span>Javascript.</span>
         </p>
-        <p id="intro3">
-          *****Please bear with me as I am currently in the process of optimizing the site for mobile. In the meantime, I recommend you turn your mobile device to landscape mode to view it. Thank you for the patience.*****
+        <p class="intro-para">
+          I am currently seeking a
+          <span>summer internship</span> to apply my existing skills to a meaningful project and learn new skills in a fast-paced environment.
         </p>
       </div>
     </section>
     <section id="contact-section">
-      <h3 id="contact1">Contact</h3>
-      <ul id="contact2">
+      <h3 class="section-title">Contact</h3>
+      <ul id="contact-info">
         <li>Email: me@tgreenwald.com</li>
         <li>Other:
           <a href="https://www.linkedin.com/in/t-greenwald/" target="_blank">LinkedIn</a>
