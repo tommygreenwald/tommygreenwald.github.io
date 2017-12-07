@@ -37,57 +37,16 @@
 
   @media only screen and (max-width: 600px) {
     #body-container {
-      width: 96%;
+      width: 100%;
       margin-top: 2vh;
     }
     body {
       background-color: #FBFBFB;
-      font-size: 21.5px;
+      font-size: 20px;
     }
     #title1 {
       color: black;
-      font-size: 1.8em;
-      font-weight: bolder;
-    }
-    #menu1 {
-      border-top: medium solid black;
-      border-bottom: medium solid black;
-      padding: 1.8vh 0 1.8vh 0;
       font-size: 1.5em;
-      font-weight: bold;
-      word-spacing: 1.5vw;
-      color: #337ab7;
-    }
-    .section-title {
-      color: black;
-      font-size: 1.3em;
-      font-weight: bold
-    }
-    .intro-para {
-      color: #4666BF;
-      font-size: 1.1em;
-    }
-
-    #contact-info {
-      color: #4666BF;
-      font-size: 1.1em;
-    }
-  }
-
-  /*tablets*/
-
-  @media screen and (min-width: 601px) and (max-width: 1025px) {
-    #body-container {
-      width: 93%;
-      margin-top: 3vh;
-    }
-    body {
-      background-color: #FBFBFB;
-      font-size: 20.5px;
-    }
-    #title1 {
-      color: black;
-      font-size: 1.7em;
       font-weight: bolder;
     }
     #menu1 {
@@ -101,14 +60,53 @@
     }
     .section-title {
       color: black;
-      font-size: 1.2em;
+      font-size: 1.15em;
+      font-weight: bold
+    }
+    .intro-para {
+      color: #4666BF;
+      font-size: 0.9em;
+    }
+    #contact-info {
+      color: #4666BF;
+      font-size: 0.9em;
+    }
+  }
+
+  /*tablets*/
+
+  @media screen and (min-width: 601px) and (max-width: 1025px) {
+    #body-container {
+      width: 95%;
+      margin-top: 3vh;
+    }
+    body {
+      background-color: #FBFBFB;
+      font-size: 20px;
+    }
+    #title1 {
+      color: black;
+      font-size: 1.6em;
+      font-weight: bolder;
+    }
+    #menu1 {
+      border-top: medium solid black;
+      border-bottom: medium solid black;
+      padding: 1.8vh 0 1.8vh 0;
+      font-size: 1.5em;
+      font-weight: bold;
+      word-spacing: 1.5em;
+      color: #337ab7;
+    }
+    .section-title {
+      color: black;
+      font-size: 1.25em;
       font-weight: bold
     }
     .intro-para {
       color: #4666BF;
       font-size: 1em;
     }
-
     #contact-info {
       color: #4666BF;
       font-size: 1em;
@@ -124,7 +122,7 @@
     }
     body {
       background-color: #FBFBFB;
-      font-size: 22px;
+      font-size: 22.5px;
     }
     #title1 {
       color: black;
@@ -149,7 +147,6 @@
       color: #4666BF;
       font-size: 0.9em;
     }
-
     #contact-info {
       color: #4666BF;
       font-size: 0.9em;
@@ -191,6 +188,19 @@
 
   #contact-section {
     margin: 0vh 4.5vw 0vh 4.5vw;
+  }
+
+  #copyright {
+    border-top: thin solid black;
+    padding-top: 8px;
+    margin: 18vh auto 2vh auto;
+    color: black;
+    font-weight: 300;
+    font-size: 0.8em;
+  }
+
+  #copyright a {
+    text-decoration: underline;
   }
 </style>
 
@@ -250,4 +260,11 @@
       </ul>
     </section>
   </div>
+
+  <footer>
+    <div id="copyright" class="text-center">
+      Copyright &copy; 2017 Tommy Greenwald. This website is
+      <a href="https://github.com/tommygreenwald/tommygreenwald.github.io">free software under GPLv3.</a></div>
+  </footer>
+
 </div>
