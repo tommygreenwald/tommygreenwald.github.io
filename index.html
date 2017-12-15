@@ -1,5 +1,6 @@
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Rubik|Trirong" rel="stylesheet">
 
 <head>
   <meta name="viewport" content="width=device-width">
@@ -166,14 +167,18 @@
       font-size: 0.9em;
     }
   }
+  
+  .title-font {
+    font-family: 'Rubik', sans-serif;
+  }
+  
+  .content-font {
+    font-family: 'Trirong', serif;
+  }
 
   .align {
     display: flex;
     align-items: center;
-  }
-
-  .header-font {
-    font-family: "Helvetica Neue", serif;
   }
 
   #menu1 span {
@@ -220,7 +225,7 @@
 
 <div id="body-container" class="container-fluid">
   <header>
-    <div class="container-fluid header-font">
+    <div class="container-fluid title-font">
       <div class="row align">
         <div class="col-xs-8 text-center">
           <h1 id="title1">
@@ -245,8 +250,8 @@
 
   <div class="container-fluid">
     <section id="about-section">
-      <h3 class="section-title">About me</h3>
-      <div id="intros">
+      <h3 class="section-title title-font">About me</h3>
+      <div id="intros" class="content-font">
         <p class="intro-para"> Hello! My name is
           <span>Tommy Greenwald</span>, current freshmen at
           <span>Northeastern CCIS.</span> I am pursuing a
@@ -269,8 +274,8 @@
       </div>
     </section>
     <section id="contact-section">
-      <h3 class="section-title">Contact</h3>
-      <ul id="contact-info">
+      <h3 class="section-title title-font">Contact</h3>
+      <ul id="contact-info" class="content-font">
         <li>Email: me@tgreenwald.com</li>
         <li>Other:
           <a href="https://www.linkedin.com/in/t-greenwald/" target="_blank">LinkedIn</a>
@@ -280,7 +285,7 @@
   </div>
 
   <footer>
-    <div id="copyright" class="text-center">
+    <div id="copyright" class="text-center title-font">
       Copyright &copy; 2017 Tommy Greenwald. This website is
       <a href="https://github.com/tommygreenwald/tommygreenwald.github.io">free software under GPLv3.</a></div>
   </footer>
