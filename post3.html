@@ -1,6 +1,28 @@
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<link href="https://fonts.googleapis.com/css?family=Patua+One|Andada" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Rubik|Trirong" rel="stylesheet">
+
+<head>
+  <meta name="viewport" content="width=device-width">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+</head>
 
 <style>
   html,
@@ -9,21 +31,128 @@
     height: 100%;
     margin: 0px;
     padding: 0px;
-    overflow-x: hidden
+    overflow-x: hidden;
   }
 
-  @media screen and (orientation: landscape) {
+  /*mobile phones*/
+
+  @media only screen and (max-width: 600px) {
+    #body-container {
+      width: 100%;
+      margin-top: 2vh;
+    }
+    body {
+      background-color: #FBFBFB;
+      font-size: 20px;
+    }
+    #title1 {
+      color: black;
+      font-size: 1.5em;
+      font-weight: bolder;
+    }
+    #logo1 {
+      width: 72%;
+      height: auto;
+    }
+    #menu1 {
+      border-top: medium solid black;
+      border-bottom: medium solid black;
+      padding: 1.8vh 0 1.8vh 0;
+      font-size: 1.2em;
+      font-weight: bold;
+      word-spacing: 0.1em;
+      color: #337ab7;
+    }
+    .post-content {
+      color: #07339A;
+      font-size: 0.9em;
+      font-weight: bold;
+      text-indent: 4vw;
+    }
+  }
+
+  /*tablets*/
+
+  @media screen and (min-width: 601px) and (max-width: 1025px) {
+    #body-container {
+      width: 87%;
+      margin-top: 3vh;
+    }
+    body {
+      background-color: #FBFBFB;
+      font-size: 20px;
+    }
+    #title1 {
+      color: black;
+      font-size: 1.6em;
+      font-weight: bolder;
+    }
+    #logo1 {
+      width: 50%;
+      height: auto;
+    }
+    #menu1 {
+      border-top: medium solid black;
+      border-bottom: medium solid black;
+      margin: auto 3vw auto 3vw;
+      padding: 1.8vh 0 1.8vh 0;
+      font-size: 1.4em;
+      font-weight: bold;
+      word-spacing: 1em;
+      color: #337ab7;
+    }
+    .post-content {
+      color: #07339A;
+      font-size: 1em;
+      font-weight: bold;
+      text-indent: 4vw;
+    }
+  }
+
+  /*desktops*/
+
+  @media screen and (min-width: 1026px) {
     #body-container {
       width: 70%;
       margin-top: 5vh;
     }
+    body {
+      background-color: #FBFBFB;
+      font-size: 22.5px;
+    }
+    #title1 {
+      color: black;
+      font-size: 1.6em;
+      font-weight: bolder;
+    }
+    #logo1 {
+      width: 42%;
+      height: auto;
+    }
+    #menu1 {
+      border-top: medium solid black;
+      border-bottom: medium solid black;
+      margin: auto 4vw auto 4vw;
+      padding: 1.8vh 0 1.8vh 0;
+      font-size: 1.3em;
+      font-weight: bold;
+      word-spacing: 1.3em;
+      color: #337ab7;
+    }
+    .post-content {
+      color: #07339A;
+      font-size: 0.9em;
+      font-weight: bold;
+      text-indent: 4vw;
+    }
   }
 
-  @media screen and (orientation: portrait) {
-    #body-container {
-      width: 90%;
-      margin-top: 5vh;
-    }
+  .title-font {
+    font-family: 'Rubik', sans-serif;
+  }
+
+  .content-font {
+    font-family: 'Trirong', serif;
   }
 
   .align {
@@ -31,42 +160,17 @@
     align-items: center;
   }
 
-  .header-font {
-    font-family: "Helvetica Neue", serif;
-  }
-
-  #title1 {
-    color: black;
-    font-size: 3vw;
-    font-weight: bolder;
-  }
-
-  #menu1 {
-    border-top: 0.2vh solid black;
-    border-bottom: 0.2vh solid black;
-    padding: 1.8vh 0 1.8vh 0;
-    font-size: 2.2vw;
-    font-weight: bold;
-    word-spacing: 2.2vw;
-    color: #337ab7;
-  }
-
   #menu1 span {
     color: black;
   }
 
   #content-section {
-    margin: 0vh 4.5vw 0vh 4.5vw;
-    color: #07339A;
-    font-size: 1.6vw;
-    font-weight: 500;
-    line-height: 5vh;
-    /*text-indent: 4vw;*/
+    margin: 1vh 4.5vw 0vh 4.5vw;
   }
 
   #content-section span {
-    color: #031f60;
-    font-weight: 900;
+    color: black;
+    font-weight: bold;
   }
 
   a:link,
@@ -79,34 +183,55 @@
     color: #498EE8;
     text-decoration: none;
   }
+
+  #copyright {
+    border-top: thin solid black;
+    padding-top: 8px;
+    margin: 10vh auto 2vh auto;
+    color: black;
+    font-weight: 300;
+    font-size: 0.8em;
+  }
+
+  #copyright a {
+    text-decoration: underline;
+  }
 </style>
 
 <div id="body-container" class="container-fluid">
   <header>
-    <div class="container-fluid header-font">
+    <div class="container-fluid title-font">
       <div class="row align">
-        <div class="col-xs-10 text-center">
-          <h1 id="title1">
-            RSA and AES in Communication
-          </h1>
+        <div class="col-xs-8 text-center">
+          <h1 id="title1">RSA and AES in Communication</h1>
+        </div>
+        <div class="col-xs-4">
+          <img id="logo1" class="img-responsive" src="http://www.livehacking.com/web/wp-content/uploads/2011/06/rsa-square-256x256.png">
+        </div>
+      </div>
+      <div class="row align">
+        <div class="col-xs-12 text-center">
           <h2 id="menu1">
             <a href="index.html">Home</a> <span>/</span>
             <a href="blog.html">Blog</a>
           </h2>
-        </div>
-        <div class="col-xs-2">
-          <img id="bitcoin1" class="img-responsive" src="http://www.livehacking.com/web/wp-content/uploads/2011/06/rsa-square-256x256.png">
         </div>
       </div>
     </div>
   </header>
 
   <div class="container-fluid">
-    <article id="content-section" class="text-justify">
+    <article id="content-section" class="text-justify content-font post-content">
       <p id="para1">
-       Coming soon!!! <br>
-       In the process of being written between all my school work!!
+        Coming soon!!! <br> In the process of being written between all my school work!!
       </p>
     </article>
   </div>
+
+  <footer>
+    <div id="copyright" class="text-center title-font">
+      Copyright &copy; 2017 Tommy Greenwald. This website is
+      <a href="https://github.com/tommygreenwald/tommygreenwald.github.io">free software under GPLv3.</a></div>
+  </footer>
+
 </div>
